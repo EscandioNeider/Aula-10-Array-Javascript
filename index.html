@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARRAY (1)</title>
+  <style>
+    /* geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* cabeçalho */
+    header {
+      background-color: #000000b0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #087fb6;
+    }
+
+    /* conteúdo principal */
+    main {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /*  itens do array e país específico */
+    #array {
+      color: #2f658a;
+    }
+
+    #pos5 {
+      color: #288ba3;
+      font-size: 1em;
+    }
+
+    /* Estilo para imagem */
+    #brasil {
+      display: none;
+      width: 150px; 
+      margin-top: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atividades com array</h1>
+    <nav>
+      <a href="index.html">Exercício 1</a> |
+      <a href="index2.html">Exercício 2</a> |
+      <a href="index3.html">Exercício 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Veja estes países: <span id="array"></span></p>
+
+    <button onclick="exibir()">Exiba o melhor país do mundo</button>
+    <p>É o: <span id="pos5"></span></p>
+    <img id="brasil" src="https://png.pngtree.com/png-clipart/20220803/ourmid/pngtree-brazil-flag-watercolor-paint-brush-transparent-background-png-image_6097357.png" alt="Bandeira do Brasil">
+  </main>
+
+  <script>
+    var paises = ['Argentina', 'Bolívia', 'Camboja', 'Dinamarca', 'Brasil', 'Finlândia', 'Gabão', 'Honduras', 'Índia', 'Jamaica'];
+
+    // Exibindo o array no elemento com id 'array'
+    document.getElementById("array").innerHTML = paises.join(', ');
+
+    function exibir(){
+      // Exibindo o nome do país na posição 5 (Brasil)
+      document.getElementById("pos5").innerHTML = paises[4];
+
+      // Exibindo a imagem do Brasil
+      document.getElementById("brasil").style.display = "block";
+    }
+  </script>
+</body>
+</html>

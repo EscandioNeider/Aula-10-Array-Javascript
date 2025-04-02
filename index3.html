@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARRAY (3)</title>
+  <style>
+    /* Geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #000000b0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #087fb6;
+    }
+
+    /* Conteúdo principal */
+    main {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /* Resultados */
+    .result {
+      margin-top: 20px;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .num {
+      color: #28a745;
+    }
+
+    .nome {
+      color: #17a2b8;
+    }
+
+    /* Estilo para o campo de entrada */
+    label {
+      font-size: 1.1em;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 1.1em;
+      margin-right: 10px;
+      width: 60px;
+      text-align: center;
+    }
+
+    /* Botão */
+    button {
+      background-color: #087fb6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005f87;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atividades com Array</h1>
+    <nav>
+      <a href="index.html">Exercício 1</a> |
+      <a href="index2.html">Exercício 2</a> |
+      <a href="index3.html">Exercício 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Escolha um número entre 1 e 30 para descobrir o nome associado:</p>
+
+    <!-- Label e campo de entrada para o número -->
+    <label for="numInput">Número:</label>
+    <input type="number" id="numInput" min="1" max="30" placeholder="1-30" required>
+    
+    <div class="result">
+      <p>Número escolhido: <span id="num" class="num"></span></p>
+      <p>Nome associado: <span id="nome" class="nome"></span></p>
+    </div>
+
+    <button onclick="mostrarNome()">Mostrar Nome</button>
+  </main>
+
+  <script>
+    var nomes = [
+      "Nami Jafet", "Senai", "Diana Prado", "Lucas Costa", "Alice Martins", "Carlos Eduardo", "Elena Souza", "Gabriel Lima", "Juliana Silva", "Thiago Pereira", 
+      "Rafaela Santos", "Pedro Almeida", "Clara Rodrigues", "Vitor Barbosa", "Mariana Dias", "Roberta Nunes", "Felipe Gomes", "Ricardo Oliveira", "Catarina Freitas", 
+      "João Ferreira", "Isabela Rocha", "Thiago Castro", "Giovanna Lima", "Ricardo Silva", "Beatriz Almeida", "Arthur Santos", "Marcos Andrade", "Luana Costa", 
+      "Breno Souza", "Juliana Ramos"
+    ];
+
+    function mostrarNome() {
+      // Obtém o número digitado pelo usuário
+      var index = document.getElementById("numInput").value;
+
+      // Verifica se o número é válido e dentro do intervalo
+      if (index >= 1 && index <= 30) {
+        document.getElementById("num").innerText = index;  // Exibe o número
+        document.getElementById("nome").innerText = nomes[index - 1];  // Exibe o nome correspondente
+      } else {
+        alert("Por favor, insira um número entre 1 e 30.");
+      }
+    }
+  </script>
+</body>
+</html>

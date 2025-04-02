@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARRAY (2)</title>
+  <style>
+    /* geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cea3ba;
+      color: #a5266c;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* cabeçalho */
+    header {
+      background-color:#c56c9d;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b60868;
+    }
+
+    /* conteúdo principal */
+    main {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /*  itens do array e país específico */
+    #array {
+      color: #fff3da;
+    }
+
+    #pos10 {
+      color: #a5266c;
+      font-size: 1em;
+    }
+
+    button{
+      border-radius: 15px;
+      padding: 15px;
+      border: none;
+      background-color: #b60868;
+      color: #fff3da;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atividades com array</h1>
+    <nav>
+      <a href="index.html">Exercício 1</a> |
+      <a href="index2.html">Exercício 2</a> |
+      <a href="index3.html">Exercício 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Humm, docinhos! : <span id="array"></span></p>
+<br>
+    <button onclick="exibir()">Exiba o 10 docinho</button>
+    <p>É o: <span id="pos10"></span></p>
+  </main>
+
+  <script>
+    var doces = ['Chocolate','Pirulito','Carolina','Bala de Goma','Bengala Doce','Panetone','Biscoito Samanta','Biscoito Coquinho','Brigadeiro','Beijinho','Casadinho','Cajuzinho','Pé de Moça','Pé de Moleque','Pão de Mel'];
+
+    // Exibindo o array no elemento com id 'array'
+    document.getElementById("array").innerHTML = doces.join(', ');
+
+    function exibir(){
+      // Exibindo o nome do país na posição 5 (Brasil)
+      document.getElementById("pos10").innerHTML = doces[9];
+    }
+  </script>
+</body>
+</html>
